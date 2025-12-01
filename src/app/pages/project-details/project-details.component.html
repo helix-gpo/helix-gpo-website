@@ -1,0 +1,105 @@
+<section class="project-details-section">
+  <div class="project-details-container">
+    @if (true) {
+    <div class="project-details-card">
+      <div class="card-header">
+        <div class="card-left-header">
+          <p class="headline-p">Projekt</p>
+          <h1 class="headline-text">{{ project.title }}</h1>
+        </div>
+        <button class="back-button" (click)="handleBackButtonClick()">
+          <app-icon
+            iconName="redo"
+            iconColor="#0d1424"
+            iconSize="2.2rem"
+          ></app-icon>
+          <p class="back-text">zurück</p>
+        </button>
+      </div>
+
+      <div class="card-content">
+        <div class="image-container">
+          <img
+            class="project-image"
+            [src]="project.imageUrl === '' ? '' : project.imageUrl"
+            [alt]="project.title"
+          />
+        </div>
+        <div class="project-right">
+          <div class="feedback-point">
+            <div class="title-line">
+              <app-icon
+                [iconName]="'view_headline'"
+                [iconColor]="'#0d1424'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+              <p class="title">Beschreibung</p>
+            </div>
+            <p class="description">{{ project.description }}</p>
+          </div>
+          <div class="timeline">
+            <div class="feedback-point left">
+              <div class="title-line">
+                <app-icon
+                  [iconName]="'event_upcoming'"
+                  [iconColor]="'#0d1424'"
+                  [iconSize]="'2.4rem'"
+                ></app-icon>
+                <p class="title">Projektstart</p>
+              </div>
+              <span class="date-string">{{
+                formatMonthYear(project.startDate.toString())
+              }}</span>
+            </div>
+            <div class="feedback-point right">
+              <div class="title-line">
+                <app-icon
+                  [iconName]="'calendar_check'"
+                  [iconColor]="'#0d1424'"
+                  [iconSize]="'2.4rem'"
+                ></app-icon>
+                <p class="title">Projektende</p>
+              </div>
+              <span class="date-string">{{
+                formatMonthYear(project.endDate.toString())
+              }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <div class="feedback-point">
+          <div class="title-line">
+            <app-icon
+              [iconName]="'group'"
+              [iconColor]="'#0d1424'"
+              [iconSize]="'2.4rem'"
+            ></app-icon>
+            <p class="title">Partner</p>
+          </div>
+          <span class="date-string">{{
+            project.websitePartnerDto.websiteCompanyDto.name
+          }}</span>
+        </div>
+        <div class="tags">
+          @for (tag of project.tags; track tag.value; let tagIdx = $index) {
+          <div>
+            <span class="tag" [ngStyle]="{ 'background-color': tag.color }">{{
+              tag.value
+            }}</span>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+    } @else {
+    <app-icon
+      [iconName]="'progress_activity'"
+      [iconColor]="'#0d1424'"
+      [iconSize]="'2.8rem'"
+      class="loading-spinner"
+    ></app-icon>
+    }
+  </div>
+</section>

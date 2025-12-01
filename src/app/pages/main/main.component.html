@@ -1,0 +1,588 @@
+<section class="hero-section" id="hero">
+  <div class="hero-container">
+    <div class="hero-text">
+      <p class="title">Helix GPO</p>
+      <p class="slogan">Die DNA Deines Unternehmens</p>
+      <p class="description">
+        Wir gestalten die Prozesse in <br />
+        Deinem Unternehmen mithilfe modernster <br />
+        Maßnahmen der Geschäftsprozessoptimierung <br />
+        <strong>effizient</strong>, <strong>effektiv</strong> und
+        <strong>digital !</strong>
+      </p>
+      <div class="button-links">
+        <button
+          class="button-link starten-link"
+          (click)="scrollToElementByButton('cta')"
+        >
+          Jetzt Starten
+        </button>
+        <button
+          class="button-link info-link"
+          (click)="scrollToElementByButton('dienstleistung')"
+        >
+          Mehr Erfahren
+        </button>
+      </div>
+    </div>
+    <div class="hero-picture">
+      <img
+        class="hero-image"
+        src="/images/hero-picture.png"
+        alt="Helix GPO Hero Image"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="dienstleistung-section" id="dienstleistung">
+  <div class="dienstleistung-container">
+    <p class="headline-p">Nutze</p>
+    <h1 class="headline-text">Unsere Dienstleistung</h1>
+    <div class="dienstleistung-grid">
+      <div class="analyze-step">
+        <app-icon
+          [iconName]="'document_search'"
+          [iconColor]="'#03dbff'"
+          [iconSize]="'4rem'"
+          class="step-icon"
+        ></app-icon>
+        <p class="step-headline">
+          Prozesse analysieren, Digitalisierungspotenziale erkennen und
+          nachhaltige Lösungen entwickeln
+        </p>
+        <p class="step-text">
+          Eine fundierte Analyse ist der Schlüssel für effiziente und
+          zukunftsfähige Prozesse!
+        </p>
+      </div>
+      <div class="standard-step">
+        <app-icon
+          [iconName]="'military_tech'"
+          [iconColor]="'#03dbff'"
+          [iconSize]="'4rem'"
+          class="step-icon"
+        ></app-icon>
+        <p class="step-headline">
+          Einheitliche Prozesse schaffen, um Effizienz, Schulung und
+          Skalierbarkeit zu verbessern
+        </p>
+        <p class="step-text">
+          Standardisierte Abläufe erleichtern Schulungen und fördern nachhaltige
+          Unternehmensentwicklung!
+        </p>
+      </div>
+      <div class="optimize-step">
+        <app-icon
+          [iconName]="'finance_mode'"
+          [iconColor]="'#03dbff'"
+          [iconSize]="'4rem'"
+          class="step-icon"
+        ></app-icon>
+        <p class="step-headline">
+          Geschäftsprozesse effizienter, digitaler und leistungsstärker
+          gestalten
+        </p>
+        <p class="step-text">
+          Wir optimieren Abläufe durch Digitalisierung, Automatisierung und
+          individuelle Prozessanpassung!
+        </p>
+      </div>
+      <div class="support-step">
+        <app-icon
+          [iconName]="'settings_account_box'"
+          [iconColor]="'#03dbff'"
+          [iconSize]="'4rem'"
+          class="step-icon"
+        ></app-icon>
+        <p class="step-headline">
+          Langfristige Begleitung für nachhaltige Prozess- und
+          Softwareentwicklung
+        </p>
+        <p class="step-text">
+          Wir sind Ihr Partner für kontinuierliche Verbesserung und digitale
+          Innovation!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-us-section" id="about-us">
+  <div class="about-us-container">
+    <p class="headline-p">Infos</p>
+    <h1 class="headline-text">Über Uns</h1>
+    <div class="about-us-content">
+      <div class="info-content">
+        <div class="profile-image">
+          <img
+            src="images/about us/Felix Breuer Image.jpg"
+            alt="Profilbild - Felix Breuer"
+          />
+          <div class="hover-overlay"></div>
+          <div class="work">
+            Professioneller Softwareentwickler bei der MRH Trowe mit Bachelor
+            Abschluss in Wirtschaftsinformatik (B.Sc.) aus dem dualen Studium
+            bei 3M
+          </div>
+        </div>
+        <div>
+          <p class="name">Felix Breuer</p>
+          <p class="role role-felix">Digitalisierung & Technologie</p>
+        </div>
+      </div>
+      <div class="info-content">
+        <div class="profile-image">
+          <img
+            src="images/about us/Henry Heller Image.jpg"
+            alt="Profilbild - Henry Heller"
+          />
+          <div class="hover-overlay"></div>
+          <div class="work">
+            Ausgebildeter Makler/Experte in Risikoabsicherung und Vorsorge (nach
+            § 34d / Finanzmakler) und Lebensretter beim DRK
+          </div>
+        </div>
+        <div>
+          <p class="name">Henry Heller</p>
+          <p class="role role-henry">Strategie & Kommunikation</p>
+        </div>
+      </div>
+    </div>
+    <div class="about-us-info">
+      <p class="why-gp">Warum Geschäftsprozessmanagement?</p>
+      <p class="gp-text">
+        Unternehmen verlieren jedes Jahr bis zu 30% ihres Umsatzes - allein
+        durch ineffiziente Prozesse. Das muss nicht sein! Mit intelligentem,
+        modernem Geschäftsprozessmanagement gestalten wir Deine
+        Unternehmensabläufe effizient, digital, zukunftssicher und nachhaltig
+        optimiert - für dauerhaften wirtschaftlichen Erfolg.
+      </p>
+      <p class="gp-text-professional">
+        Professionell, persönlich und auf Augenhöhe!
+      </p>
+      <div class="button-links">
+        <button
+          class="button-link starten-link"
+          (click)="scrollToElementByButton('cta')"
+        >
+          Jetzt Starten
+        </button>
+        <button
+          class="button-link info-link"
+          (click)="scrollToElementByButton('angebote')"
+        >
+          Mehr Erfahren
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="angebote-section" id="angebote">
+  <div class="angebote-container">
+    <p class="headline-p">Entdecke</p>
+    <h1 class="headline-text">Unsere Angebote</h1>
+    <div class="angebote">
+      <div class="card">
+        <div class="card-image">
+          <img
+            src="images/angebote/Automation.jpg"
+            alt="Prozessoptimierung - Bild"
+          />
+        </div>
+        <div class="content">
+          <p class="card-headline">Prozessoptimierung</p>
+          <div class="part-angebot">
+            <app-icon
+              [iconName]="'document_search'"
+              [iconColor]="'#03dbff'"
+              [iconSize]="'2.6rem'"
+              class="step-icon"
+            ></app-icon>
+            <p>Prozessanalyse</p>
+          </div>
+          <div class="part-angebot">
+            <app-icon
+              [iconName]="'settings_b_roll'"
+              [iconColor]="'#03dbff'"
+              [iconSize]="'2.6rem'"
+              class="step-icon"
+            ></app-icon>
+            <p>Automatisierung</p>
+          </div>
+          <div class="part-angebot">
+            <app-icon
+              [iconName]="'network_intel_node'"
+              [iconColor]="'#03dbff'"
+              [iconSize]="'2.6rem'"
+              class="step-icon"
+            ></app-icon>
+            <p>KI-Integration</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="images/angebote/Software.jpg" alt="Software & Web - Bild" />
+        </div>
+        <div class="content">
+          <p class="card-headline">Software & Web</p>
+          <div class="part-angebot">
+            <app-icon
+              [iconName]="'code'"
+              [iconColor]="'#03dbff'"
+              [iconSize]="'2.6rem'"
+              class="step-icon"
+            ></app-icon>
+            <p>Individualsoftware</p>
+          </div>
+          <div class="part-angebot">
+            <app-icon
+              [iconName]="'captive_portal'"
+              [iconColor]="'#03dbff'"
+              [iconSize]="'2.6rem'"
+              class="step-icon"
+            ></app-icon>
+            <p>Webdesign</p>
+          </div>
+          <div class="part-angebot">
+            <app-icon
+              [iconName]="'skull'"
+              [iconColor]="'#03dbff'"
+              [iconSize]="'2.6rem'"
+              class="step-icon"
+            ></app-icon>
+            <p>IT-Sicherheit</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img
+            src="images/angebote/Monitoring.jpg"
+            alt="Monitoring & Steuerung - Bild"
+          />
+        </div>
+        <div class="content">
+          <p class="card-headline">Monitoring & Steuerung</p>
+          <div class="part-angebot">
+            <app-icon
+              [iconName]="'monitor_heart'"
+              [iconColor]="'#03dbff'"
+              [iconSize]="'2.6rem'"
+              class="step-icon"
+            ></app-icon>
+            <p>Prozessmonitoring</p>
+          </div>
+          <div class="part-angebot">
+            <app-icon
+              [iconName]="'finance_mode'"
+              [iconColor]="'#03dbff'"
+              [iconSize]="'2.6rem'"
+              class="step-icon"
+            ></app-icon>
+            <p>Optimierung</p>
+          </div>
+          <div class="part-angebot">
+            <app-icon
+              [iconName]="'schema'"
+              [iconColor]="'#03dbff'"
+              [iconSize]="'2.6rem'"
+              class="step-icon"
+            ></app-icon>
+            <p>Skalierbarkeit</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img
+            src="images/angebote/Strategy.jpg"
+            alt="Strategie & Entwicklung - Bild"
+          />
+        </div>
+        <div class="content">
+          <p class="card-headline">Strategie & Entwicklung</p>
+          <div class="part-angebot">
+            <app-icon
+              [iconName]="'rebase_edit'"
+              [iconColor]="'#03dbff'"
+              [iconSize]="'2.6rem'"
+              class="step-icon"
+            ></app-icon>
+            <p>Workflowintegration</p>
+          </div>
+          <div class="part-angebot">
+            <app-icon
+              [iconName]="'account_tree'"
+              [iconColor]="'#03dbff'"
+              [iconSize]="'2.6rem'"
+              class="step-icon"
+            ></app-icon>
+            <p>Struktur</p>
+          </div>
+          <div class="part-angebot">
+            <app-icon
+              [iconName]="'cycle'"
+              [iconColor]="'#03dbff'"
+              [iconSize]="'2.6rem'"
+              class="step-icon"
+            ></app-icon>
+            <p>Nachhaltigkeit</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="angebot-text">
+      Jedes Unternehmen hat <strong>individuelle Anforderungen</strong> -
+      deshalb entwickeln wir maßgeschneiderte Lösungen und Konditionen.
+    </p>
+    <p class="angebot-text">
+      Die Preise sind daher nicht pauschal, sondern richten sich jeweils nach
+      Projekt und entsprechendem Umfang.
+    </p>
+  </div>
+</section>
+
+<section class="projects-section" id="projects">
+  <div class="projects-container">
+    <p class="headline-p">Erkunde</p>
+    <h1 class="headline-text">Bisherige Projekte</h1>
+
+    @if (!loadingProjects) {
+    <div class="projects-grid">
+      @for (project of shownProjects; track project.id; let idx = $index) {
+      <div class="project-card">
+        <div class="project-image-container">
+          <img
+            class="project-image"
+            [src]="
+              project.imageUrl === ''
+                ? 'images/placeholder profile picture.png'
+                : project.imageUrl
+            "
+            [alt]="project.title"
+          />
+        </div>
+        <div class="project-content">
+          <div class="project-text">
+            <p class="project-title">{{ project.title }}</p>
+            <p class="project-description">
+              {{ shortenText(project.description, 120, true) }}
+            </p>
+          </div>
+          <div class="tags">
+            @for (tag of project.tags; track tag.value; let tagIdx = $index) {
+            <div>
+              <span class="tag" [ngStyle]="{ 'background-color': tag.color }">{{
+                tag.value
+              }}</span>
+            </div>
+            }
+          </div>
+          <div class="card-footer">
+            <div class="project-time">
+              <app-icon
+                [iconName]="'event_upcoming'"
+                [iconColor]="'#0d1424'"
+                [iconSize]="'3.2rem'"
+                class="step-icon"
+              ></app-icon>
+              <span class="date-string">{{
+                formatMonthYear(project.startDate.toString())
+              }}</span>
+            </div>
+            <button
+              (click)="handleProjectDetailsButtonClick(project.id)"
+              class="more-button"
+            >
+              Details
+            </button>
+          </div>
+        </div>
+      </div>
+      } @empty {
+      <p class="resource-text">Projekte konnten nicht geladen werden!</p>
+      }
+    </div>
+    } @else {
+    <app-icon
+      [iconName]="'progress_activity'"
+      [iconColor]="'#ffffff'"
+      [iconSize]="'3.6rem'"
+      class="loading-spinner"
+    ></app-icon>
+    }
+
+    <!-- button only shown if more than 3 projects do exist -->
+    @if (projects.length > 3) {
+    <div class="button-div">
+      <button
+        class="projects-button"
+        (click)="handleToggleShowAllProjectsButton()"
+      >
+        {{ showAllProjectsText }}
+      </button>
+    </div>
+    }
+  </div>
+</section>
+
+<section class="testimonials-section" id="testimonials">
+  <div class="testimonials-container">
+    <p class="headline-p">Vertraue</p>
+    <h1 class="headline-text">Referenzen</h1>
+
+    <p class="testimonials-text">
+      Unsere Kunden bewerten uns im Durchschnitt mit
+      <span class="rating">{{ averageRating }}</span> von 5 Sternen - basierend
+      auf {{ testimonials.length }} verifizierten Erfahrungsberichten!
+    </p>
+
+    @if (!loadingTestimonials) {
+    <div class="testimonials-grid">
+      @for (testimonial of shownTestimonials; track testimonial.id; let idx =
+      $index) {
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="image-container">
+            <img
+              class="testimonial-image"
+              [src]="testimonial.imageUrl"
+              [alt]="testimonial.title"
+            />
+          </div>
+          <div class="stars">
+            @for (i of ratingArray; track i; let starIdx = $index) {
+            <app-icon
+              [iconName]="'star'"
+              [iconSize]="'2.4rem'"
+              [iconColor]="i > testimonial.result ? '#cccccc' : '#fc03d5'"
+            ></app-icon>
+            }
+          </div>
+          <div class="testimonial-time">
+            <app-icon
+              [iconName]="'calendar_check'"
+              [iconColor]="'#0d1424'"
+              [iconSize]="'2.4rem'"
+            ></app-icon>
+            <span class="testimonial-date">{{
+              formatMonthYear(testimonial.creationDate.toString())
+            }}</span>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <div class="description-container">
+            <p class="testimonial-description">
+              {{ shortenText(testimonial.description, 100, true) }}
+            </p>
+          </div>
+          <div class="testimonial-footer">
+            <div class="testimonial-name">
+              {{ testimonial.websiteProjectDto.websitePartnerDto.name }}
+            </div>
+            <div class="testimonial-role">
+              {{ testimonial.websiteProjectDto.websitePartnerDto.job }}
+            </div>
+            <div class="testimonial-company">
+              {{
+                testimonial.websiteProjectDto.websitePartnerDto
+                  .websiteCompanyDto.name
+              }}
+            </div>
+          </div>
+        </div>
+      </div>
+      } @empty {
+      <p class="resource-text">Referenzen konnten nicht geladen werden!</p>
+      }
+    </div>
+    } @else {
+    <div>
+      <app-icon
+        [iconName]="'progress_activity'"
+        [iconColor]="'#0d1424'"
+        [iconSize]="'3.6rem'"
+        class="loading-spinner"
+      ></app-icon>
+    </div>
+    }
+
+    <!-- button only shown if more than 3 testimonials do exist -->
+    @if (testimonials.length > 3) {
+    <div class="page-decision">
+      <button
+        class="page-button left-page-button"
+        [ngStyle]="{
+          'background-color': showLeftTestimonials ? '#03dbff' : '#cccccc'
+        }"
+        (click)="handleShowLeftPage()"
+      ></button>
+      <button
+        class="page-button right-page-button"
+        [ngStyle]="{
+          'background-color': showLeftTestimonials ? '#cccccc' : '#03dbff'
+        }"
+        (click)="handleShowRightPage()"
+      ></button>
+    </div>
+    }
+  </div>
+</section>
+
+<section class="cta-section" id="cta">
+  <div class="cta-container">
+    <p class="headline-p">Jetzt</p>
+    <h1 class="headline-text">Kontakt aufnehmen</h1>
+    <p class="cta-text">
+      Kontaktiere uns auf einem Kanal Deiner Wahl und vereinbare einen
+      kostenlosen Ersttermin!
+    </p>
+    <div class="channels">
+      <div class="channel">
+        <app-icon
+          [iconName]="'forward_to_inbox'"
+          [iconColor]="'#03dbff'"
+          [iconSize]="'4.8rem'"
+          class="step-icon"
+        ></app-icon>
+        <p class="channel-title">Email</p>
+        <p class="channel-text">Schreib uns, wir melden uns zeitnah zurück!</p>
+        <a
+          href="mailto:helix.gpo@gmail.com?subject=Anfrage:%20"
+          class="channel-value"
+          >helix.gpo&#64;gmail.com</a
+        >
+      </div>
+      <div class="channel">
+        <app-icon
+          [iconName]="'phone_in_talk'"
+          [iconColor]="'#03dbff'"
+          [iconSize]="'4.8rem'"
+          class="step-icon"
+        ></app-icon>
+        <p class="channel-title">Telefon</p>
+        <p class="channel-text">Direkt anrufen und persönlich sprechen.</p>
+        <a href="tel:+4915114924348" class="channel-value">+49 1511 4924348</a>
+      </div>
+      <div class="channel">
+        <app-icon
+          [iconName]="'home_work'"
+          [iconColor]="'#03dbff'"
+          [iconSize]="'4.8rem'"
+          class="step-icon"
+        ></app-icon>
+        <p class="channel-title">Büro</p>
+        <p class="channel-text">Persönlich vor Ort oder per Online-Meeting.</p>
+        <a
+          href="https://www.google.com/maps?q=Markt+11+41460+Neuss"
+          target="_blank"
+          class="channel-value"
+          >Markt 11, 41460 Neuss - Deutschland</a
+        >
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,262 @@
+/* App Container */
+.app-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 12rem;
+  background-color: var(--main-dark-blue);
+  color: var(--main-text-color-light);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100%;
+  overflow: hidden;
+}
+
+.logo {
+  height: 20rem;
+  width: 20rem;
+}
+
+/* Navbar */
+.main-nav-list {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  list-style: none;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--main-text-color-light);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover {
+  color: var(--accent-blue);
+}
+
+.main-nav-link:active {
+  color: var(--accent-blue-active);
+}
+
+.main-nav-link.cta-link {
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--main-text-color-light);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: var(--accent-blue);
+  padding: 1.2rem 2.4rem;
+  box-shadow: 0rem 0.2rem 0.2rem 0.2rem var(--blue-shadow-color);
+}
+
+.main-nav-link.cta-link:hover {
+  background-color: var(--accent-blue-hover);
+}
+
+.main-nav-link.cta-link:active {
+  background-color: var(--accent-blue-active);
+}
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.menu-button:hover {
+  opacity: 0.8;
+}
+
+.menu-button:active {
+  opacity: 0.6;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  width: 100%;
+  border-top: 1px solid var(--main-dark-blue-border);
+  background-color: var(--main-dark-blue);
+  color: var(--main-text-color-light);
+  padding: 12rem 0;
+}
+
+.staging-text {
+  font-size: 1.6rem;
+  margin-bottom: 6.4rem;
+  line-height: 1.5;
+  font-style: italic;
+  text-align: center;
+}
+
+.top-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 6.4rem;
+}
+
+.top-content img {
+  width: 16rem;
+  height: 16rem;
+}
+
+.main-nav-link-button {
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--main-text-color-light);
+  background-color: var(--main-dark-blue);
+  border: none;
+  transition: all 0.3s;
+}
+
+.main-nav-link-button:hover {
+  color: var(--accent-blue);
+}
+
+.main-nav-link-button:active {
+  color: var(--accent-blue-active);
+}
+
+.social-media {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.social-media img {
+  width: 4rem;
+  height: 4rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.social-media img:hover {
+  opacity: 0.8;
+}
+
+.social-media img:active {
+  opacity: 0.6;
+}
+
+.bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 1.6rem;
+}
+
+.functions {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.function-link {
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--main-text-color-light);
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+
+.function-link:hover {
+  color: var(--accent-white-hover);
+}
+
+.function-link:active {
+  color: var(--accent-white-active);
+}
+
+.function-link.pink-link {
+  color: var(--accent-pink);
+}
+
+.function-link.pink-link:hover {
+  color: var(--accent-pink-hover);
+}
+
+.function-link.pink-link:active {
+  color: var(--accent-pink-active);
+}
+
+@media (max-width: 56.25em) {
+  .top-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+    margin-bottom: 6.4rem;
+  }
+
+  .menu-button {
+    display: block;
+    justify-self: end;
+  }
+
+  .main-nav-list {
+    display: none;
+  }
+
+  .social-media {
+    grid-column: 1 / -1;
+    justify-self: start;
+    margin-top: 4rem;
+    gap: 1.9rem;
+    gap: 2;
+  }
+}
+
+@media (max-width: 48em) {
+  .social-media {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 9.6rem;
+    gap: 2;
+  }
+
+  .bottom-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,114 @@
+section {
+  padding: 12rem 0;
+  width: 100%;
+
+  border-top: 1px solid var(--main-dark-blue-border);
+  color: var(--main-text-color-light);
+  background-color: var(--main-dark-blue);
+}
+
+.impressum-section {
+  width: 100%;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.headline-text {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.06rem;
+}
+
+.header-text {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.datenschutz-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-bottom: 4.8rem;
+}
+
+.headline-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  color: var(--main-text-color-dark);
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  cursor: pointer;
+  background-color: var(--accent-white);
+  box-shadow: 0rem 0.2rem 0.2rem 0.14rem var(--white-shadow-color);
+  transition: all 0.3s;
+}
+
+.back-button:hover {
+  background-color: var(--accent-white-hover);
+}
+
+.back-button:active {
+  background-color: var(--accent-white-active);
+}
+
+.container .line {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  text-align: justify;
+}
+
+.container .line.name {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.bottom {
+  margin-bottom: 3.6rem;
+}
+
+.name-bottom {
+  margin-bottom: 2.4rem;
+}
+
+.betw-bottom {
+  margin-bottom: 1.6rem;
+}
+
+.bottom-bot {
+  margin-bottom: 6.4rem;
+}
+
+.mail {
+  color: var(--accent-pink);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.mail:hover {
+  color: var(--accent-pink-hover);
+}
+
+.mail:active {
+  color: var(--accent-pink-active);
+}

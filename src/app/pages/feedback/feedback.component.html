@@ -1,0 +1,217 @@
+<section class="feedback-section">
+  <div class="feedback-container">
+    <div class="feedback-card">
+      <div class="card-header">
+        <div class="card-left-header">
+          <p class="headline-p">Teile</p>
+          <h1 class="headline-text">Deine Erfahrungen</h1>
+        </div>
+        <button class="back-button" (click)="handleBackButtonClick()">
+          <app-icon
+            iconName="redo"
+            iconColor="#0d1424"
+            iconSize="2.2rem"
+          ></app-icon>
+          <p class="back-text">zurück</p>
+        </button>
+      </div>
+
+      <div class="card-content">
+        <div class="feedback-side">
+          <div class="feedback-point">
+            <div class="title-line">
+              <app-icon
+                [iconName]="'view_headline'"
+                [iconColor]="'#0d1424'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+              <p
+                class="title"
+                [ngStyle]="{
+                  color: showTitleWarning ? '#D50000' : '#0d1424cc'
+                }"
+              >
+                Titel:
+              </p>
+              @if (showTitleWarning) {
+              <app-icon
+                [iconName]="'exclamation'"
+                [iconColor]="'#D50000'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+              }
+            </div>
+            <input
+              [(ngModel)]="
+                websiteTestimonialRequest.testimonialDtoRequest.title
+              "
+              class="feedback-input"
+              type="text"
+              placeholder="Feedback Titel"
+            />
+          </div>
+          <div class="feedback-point bottom">
+            <div class="title-line">
+              <app-icon
+                [iconName]="'account_circle'"
+                [iconColor]="'#0d1424'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+              <p class="title">Foto:</p>
+            </div>
+            <div class="upload-container">
+              <label class="upload-button" for="fileInput">
+                <app-icon
+                  [iconName]="'upload'"
+                  [iconColor]="'#ffffff'"
+                  [iconSize]="'2.4rem'"
+                ></app-icon>
+                <span>Hochladen</span>
+              </label>
+              <input
+                type="file"
+                id="fileInput"
+                (change)="handleOnFileSelected($event)"
+              />
+              @if (!selectedFile) {
+              <app-icon
+                [iconName]="'done_all'"
+                [iconColor]="'#cccccc'"
+                [iconSize]="'2.2rem'"
+              ></app-icon>
+              } @else {
+              <app-icon
+                [iconName]="'done_all'"
+                [iconColor]="'#fc03d5'"
+                [iconSize]="'2.8rem'"
+              ></app-icon>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="middle-feedback">
+          <div class="feedback-point">
+            <div class="title-line">
+              <app-icon
+                [iconName]="'chat_add_on'"
+                [iconColor]="'#0d1424'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+              <p
+                class="title"
+                [ngStyle]="{
+                  color: showDescriptionWarning ? '#D50000' : '#0d1424cc'
+                }"
+              >
+                Feedback:
+              </p>
+              @if (showDescriptionWarning) {
+              <app-icon
+                [iconName]="'exclamation'"
+                [iconColor]="'#D50000'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+              }
+            </div>
+            <textarea
+              [(ngModel)]="
+                websiteTestimonialRequest.testimonialDtoRequest.description
+              "
+              class="message-text"
+              placeholder="Deine Erfahrungen..."
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="feedback-side">
+          <div class="feedback-point">
+            <div class="title-line">
+              <app-icon
+                [iconName]="'star_shine'"
+                [iconColor]="'#0d1424'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+              <p
+                class="title"
+                [ngStyle]="{
+                  color: showRatingWarning ? '#D50000' : '#0d1424cc'
+                }"
+              >
+                Bewertung:
+              </p>
+              @if (showRatingWarning) {
+              <app-icon
+                [iconName]="'exclamation'"
+                [iconColor]="'#D50000'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+              }
+            </div>
+            <div class="result-stars">
+              @for (i of ratingArray; track i; let starIdx = $index) {
+              <app-icon
+                [iconName]="'star'"
+                [iconSize]="'2.4rem'"
+                [iconColor]="i <= ratingResult ? '#fc03d5' : '#cccccc'"
+                class="star-icon"
+                (click)="handleRatingResultClick(i)"
+              ></app-icon>
+              }
+            </div>
+          </div>
+          <div class="feedback-point bottom">
+            <div class="title-line">
+              <app-icon
+                [iconName]="'key'"
+                [iconColor]="'#0d1424'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+              <p
+                class="title"
+                [ngStyle]="{
+                  color: showAuthTokenWarning ? '#D50000' : '#0d1424cc'
+                }"
+              >
+                Code:
+              </p>
+              @if (showAuthTokenWarning) {
+              <app-icon
+                [iconName]="'exclamation'"
+                [iconColor]="'#D50000'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+              }
+            </div>
+            <input
+              [(ngModel)]="websiteTestimonialRequest.authTokenValue"
+              class="feedback-input"
+              type="text"
+              placeholder="Email-Code"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <button (click)="handleSendButtonClick()" class="send-button">
+          <span>senden</span>
+          @if (!sendingProcessing) {
+          <app-icon
+            [iconName]="'send'"
+            [iconColor]="'#ffffff'"
+            [iconSize]="'2.4rem'"
+          ></app-icon>
+          } @else {
+          <app-icon
+            [iconName]="'progress_activity'"
+            [iconColor]="'#ffffff'"
+            [iconSize]="'2.4rem'"
+            class="loading-spinner"
+          ></app-icon>
+          }
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

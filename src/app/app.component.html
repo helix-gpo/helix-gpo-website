@@ -1,0 +1,198 @@
+<div class="app-container">
+  <header id="header" class="header">
+    <div class="container header-content">
+      <a href="#">
+        <img class="logo" src="/images/logo-no-bg.svg" alt="Helix GPO Logo" />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li>
+            <button
+              class="main-nav-link-button"
+              (click)="scrollToElementByButton('hero')"
+            >
+              Start
+            </button>
+          </li>
+          <li>
+            <button
+              class="main-nav-link-button"
+              (click)="scrollToElementByButton('dienstleistung')"
+            >
+              Dienstleistung
+            </button>
+          </li>
+          <li>
+            <button
+              class="main-nav-link-button"
+              (click)="scrollToElementByButton('about-us')"
+            >
+              Über Uns
+            </button>
+          </li>
+          <li>
+            <button
+              class="main-nav-link-button"
+              (click)="scrollToElementByButton('angebote')"
+            >
+              Angebote
+            </button>
+          </li>
+          <li>
+            <button
+              class="main-nav-link-button"
+              (click)="scrollToElementByButton('projects')"
+            >
+              Projekte
+            </button>
+          </li>
+          <li>
+            <button
+              class="main-nav-link-button"
+              (click)="scrollToElementByButton('testimonials')"
+            >
+              Referenzen
+            </button>
+          </li>
+          <li>
+            <button
+              class="main-nav-link cta-link"
+              (click)="scrollToElementByButton('cta')"
+            >
+              Jetzt Starten
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <button class="menu-button" (click)="handleMenuButtonClick()">
+        <app-icon
+          [iconName]="'menu'"
+          [iconColor]="'#fff'"
+          [iconSize]="'4rem'"
+        ></app-icon>
+      </button>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      @if (environment !== 'prod') {
+      <div class="staging-text">
+        Diese Website befindet sich aktuell in der Staging-Phase. Wir arbeiten
+        bereits an der finalen Version - echte Projekte und Referenzen folgen
+        bald!
+      </div>
+      }
+      <div class="top-content">
+        <img src="images/logo-no-bg.svg" alt="Logo" />
+        <nav>
+          <ul class="main-nav-list">
+            <li>
+              <button
+                class="main-nav-link-button"
+                (click)="scrollToElementByButton('header')"
+              >
+                Start
+              </button>
+            </li>
+            <li>
+              <button
+                class="main-nav-link-button"
+                (click)="scrollToElementByButton('dienstleistung')"
+              >
+                Dienstleistung
+              </button>
+            </li>
+            <li>
+              <button
+                class="main-nav-link-button"
+                (click)="scrollToElementByButton('about-us')"
+              >
+                Über Uns
+              </button>
+            </li>
+            <li>
+              <button
+                class="main-nav-link-button"
+                (click)="scrollToElementByButton('angebote')"
+              >
+                Angebote
+              </button>
+            </li>
+            <li>
+              <button
+                class="main-nav-link-button"
+                (click)="scrollToElementByButton('projects')"
+              >
+                Projekte
+              </button>
+            </li>
+            <li>
+              <button
+                class="main-nav-link-button"
+                (click)="scrollToElementByButton('testimonials')"
+              >
+                Referenzen
+              </button>
+            </li>
+            <li>
+              <button
+                class="main-nav-link-button"
+                (click)="scrollToElementByButton('cta')"
+              >
+                Kontakt
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <button class="menu-button" (click)="handleMenuButtonClick()">
+          <app-icon
+            [iconName]="'menu'"
+            [iconColor]="'#fff'"
+            [iconSize]="'4rem'"
+          ></app-icon>
+        </button>
+        <div class="social-media">
+          <img
+            src="images/footer/facebook.png"
+            alt="Facebook Icon"
+            (click)="
+              toToLink('https://www.facebook.com/profile.php?id=61580391037784')
+            "
+          />
+          <img
+            src="images/footer/insta.png"
+            alt="Instagram Icon"
+            (click)="toToLink('https://www.instagram.com/_helix_gpo/')"
+          />
+          <img
+            src="images/footer/linked in.png"
+            alt="Linked In Icon"
+            (click)="
+              toToLink('https://www.linkedin.com/in/henry-heller-aa2547383/')
+            "
+          />
+        </div>
+      </div>
+      <div class="bottom-content">
+        <div class="functions">
+          <a class="function-link" (click)="routing('datenschutz')"
+            >Datenschutz</a
+          >
+          <a class="function-link" (click)="routing('impressum')">Impressum</a>
+          <a class="function-link pink-link" (click)="routing('feedback')"
+            >Feedback geben</a
+          >
+        </div>
+        <p class="copyright">
+          &copy; <span class="year">2025</span> Helix GPO. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>
+
